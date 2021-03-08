@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+* {
+    font-family:"Source Sans Pro" , sans-serif;
+    
+}
+body{
+    background: linear-gradient(to right, #b366ff 50%,  #66ffff 90%);
+}
+h1 {
+    color: #66ffff;
+}
+
+#header {
+    color: white;
+    text-align: center;
+}
+
+.div-container {
+    display: block;
+    justify-content: center;
+}
+
+li{
+    display: inline-block;
+    list-style: none;
+}
+
+.cbox-main {
+    color: #66ffff;
+    border: 1px solid #66ffff;
+    border-radius: 50px;
+    padding: 15px 50px;
+    box-shadow: 1px 2px 3px #66ffff;
+    margin: 50px;
+}
+
+ul {
+    margin: 20px 0;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input:hover ~ label {
+    background:#721691d3;
+    box-shadow: 1px 5px 6px #bf00ff;
+    border: 1px solid #bf00ff;
+    
+}
+
+input:checked ~ label {
+    background: #721691d3;
+    color: #bf00ff;
+    box-shadow: 1px 5px 6px #bf00ff;
+    border: 1px solid #bf00ff;
+}
+
+input:checked ~ label::after {
+    content: "\000A0 \000A0 \000A0\2713";
+}
+

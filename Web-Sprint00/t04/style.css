@@ -1,0 +1,64 @@
+img{
+    height: 182px;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: auto;
+    position: relative;
+}
+
+.CAmerica, .IronMan, .BWidow, .Spider {
+    width: 270px;
+    height: 140px;
+    border-radius: 5px;
+    font-family:Verdana;
+    margin: 47px 15px;
+    position: relative;
+    padding: 20px 12px 0px 0px;
+}
+
+.Spider img{
+    top: 0px;
+}
+
+
+
+#Alias {
+    font-size: 12px;
+    color: white;
+    text-align: right;
+    margin: 10px 0px 0px 0px;
+    position: relative;
+    top: -15px;
+}
+
+#RName {
+    font-size: 9px;
+    color: rgb(255, 255, 255, 0.5);
+    text-align: right;
+    top: -25px;
+    position: relative;
+
+}
+
+.CAmerica {
+    background: linear-gradient(#4568DC, #B06AB3);
+}
+
+.IronMan {
+    background: linear-gradient(#e52d27, #b31217);
+}
+
+.BWidow{
+    background: linear-gradient(#000, #61045F);
+}
+
+.Spider {
+    background: linear-gradient(#e52d27, #000);
+}

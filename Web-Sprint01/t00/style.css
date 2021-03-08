@@ -1,0 +1,10 @@
+img {
+    float: left;
+    padding: 0 20px;
+}
+
+@media print {
+    img {
+        float: none;
+    }
+}

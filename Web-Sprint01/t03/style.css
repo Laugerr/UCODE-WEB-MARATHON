@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html *{
+    color: white;
+}
+
+html body {
+    background: linear-gradient(to right, black,navy);
+}
+
+.header {
+    top: 0px;
+    text-align: center;
+    box-shadow: 6px 8px 6px -1px navy;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu1, .menu2 {
+    width: 50%;
+    box-shadow: 2px 3px 7px red;
+}
+
+.nav-container > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;    
+}
+
+.nav-container > ul li a {
+    display: block;
+    background: rgba(0, 153, 255, 0);
+    padding: 15px 200px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    font-weight: bold;
+}
+
+.nav-container ul li {
+    position: relative;
+  }
+
+.nav-container li ul {
+    position: absolute;
+    list-style: none;
+    display: none;
+    left: -40px;
+    width: 655px; 
+  }
+
+  .nav-container li:hover > ul {
+    display: block;  
+  }
+  
+  .nav-container .menu1 > ul li ul {
+    position: absolute;
+    top: 0;
+    left: 620px;
+  }
+
+  .nav-container .menu2 > ul li ul {
+    position: absolute;
+    top: 0;
+    left: -700px;
+  }
+  
+  .nav-container .menu1 ul a, .nav-container .menu2 ul a {
+    background: linear-gradient(to right, red 1px, navy 80%);
+    margin: 0px;
+    font-size: 20px;
+    text-align: left;
+  }
+
+.nav-container li a:hover {
+    background: linear-gradient(to top, red 1px, navy 80%);
+    box-shadow:
+       inset 0 -3em 3em rgba(247, 8, 8, 0.1),
+             0 0  0 2px rgb(252, 0, 0),
+             0.3em 0.3em 1em rgba(255, 0, 0, 0.3);
+  }
+  

@@ -1,0 +1,13 @@
+.Gauntlet {
+    height: 220px;
+    width: auto;
+}
+
+img {
+    height: 60px;
+}
+
+.Gauntlet:hover ~ table .EMan td:nth-child(even),
+.Gauntlet:hover ~ table .OMan td:nth-child(odd){
+    visibility: hidden;
+}

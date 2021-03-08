@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Superhero application</title>
+        <meta name="description" content="t08. Superhero application" charset="utf-8">
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <h1>Superhero Form</h1>
+        <form action="appplication" method="POST">
+            <fieldset class="entering">
+
+                <fieldset class="zabi">
+                    <legend>About the Superhero</legend>
+                    <form>
+                        <label for="RealName">Real Name</label>
+                        <input type="text" name="RealName"  placeholder="Superhero real name">
+                        <label for="HeroAlias">Superhero Name</label>
+                        <input type="text" name="HeroAlias" placeholder="Superhero alias">
+                        <label for="Age">Age</label>
+                        <input type="number" min="1" max="999" name="Age" step="1"><br><br>
+                        <label for="About">About </label>
+                        <textarea name="About" rows="5" cols="68" minlength="70" maxlength="500" placeholder="Information about the superhero, max 500 symbols"></textarea><br><br>
+                        <label for="Photo">Photo:</label>
+                        <input type="file" name="HeroPhoto"> 
+                    </form>
+                </fieldset>
+                <fieldset class="zabi">
+                    <legend>Powers</legend>
+                    <form action="">
+                        <input type="checkbox" name="checkbox">
+                        <label for="check">Telekinesis</label>
+                        <input type="checkbox" name="checkbox">
+                        <label for="check">Super strength or speed</label>
+                        <input type="checkbox" name="checkbox">
+                        <label for="check">Shapeshifting</label>
+                        <input type="checkbox" name="checkbox">
+                        <label for="check">Flight</label>
+                        <input type="checkbox" name="checkbox">
+                        <label for="check">Elemental control</label>
+                        <input type="checkbox" name="checkbox">
+                        <label for="check">Other</label><br><br>
+                        <label for="LevelControl">Level of control:</label>
+                        <input type="range" step="1" min="0" max="10" minlength="1">
+                    </form>
+                </fieldset>
+                <fieldset class="zabi">
+                    <legend>Origin of Powers</legend>
+                    <form>
+                        <input type="radio" name="Origin">
+                        <label for="Origin">Uknown</label>
+                        <input type="radio" name="Origin">
+                        <label for="Origin">Freak lab accident</label>
+                        <input type="radio" name="Origin">
+                        <label for="Origin">Chosen by an ancient wise being</label>
+                        <input type="radio" name="Origin">
+                        <label for="Origin">The superhero is not human</label>
+                        <input type="radio" name="Origin">
+                        <label for="Origin">Other</label>
+                    </form>
+                </fieldset>
+                <br>
+                <form>
+                    <button>CLEAR</button>
+                    <button>SEND</button>
+                </form>
+        </fieldset>
+    </body>
+
+</html>

@@ -1,0 +1,7 @@
+.image {
+    margin: 200px;
+}
+
+.image:hover{
+    transform: rotate(calc(360deg - 30deg));
+}

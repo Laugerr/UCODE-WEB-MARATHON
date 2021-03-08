@@ -1,0 +1,31 @@
+body {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    margin-right: 10px;
+}
+input {
+    width: 100%;
+}
+
+button {
+    width: auto;
+}
+input, button {
+    padding: 0 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    line-height: 2em;
+    color: green;
+
+}
+
+input:hover, button:hover {
+    color: red;
+}

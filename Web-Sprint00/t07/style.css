@@ -1,0 +1,52 @@
+table {
+    width: 100%;
+    text-align: center;
+    border: 4px solid black;
+    text-align: center;
+    background: linear-gradient(to right,#6e0000,antiquewhite);
+    
+}
+
+th{
+    background-color: rgba(110, 0, 0, 0.4);
+    color: #ffe369;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px,color - rgb(189, 195, 199, 0.05);
+}
+
+.col00, .col0 {
+    font-weight: bold;
+    color: white;
+}
+
+.col0 {
+    background-color: rgba(143, 148, 251, 0.1);
+}
+
+#r2-6 {
+    background-color: antiquewhite;
+    color: midnightblue;
+    border: 2px solid rgba(189, 195, 199, 0.05);
+    padding: 5px 50px;
+}
+
+tr {
+    padding: 5px 50px;
+}
+
+#F-H {
+    color: white;
+    background-color: darkred;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+
+
+
