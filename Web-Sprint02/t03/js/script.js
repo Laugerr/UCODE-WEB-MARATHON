@@ -1,13 +1,14 @@
-let chooseNumber = Number(prompt("Choose a number from 1 to 10"));
+var chooseNumber = Number(prompt("Choose a number from 1 to 10"));
 
-
-
+while(chooseNumber > 10 || chooseNumber < 1 || Number.isNaN(chooseNumber)){
+    chooseNumber = Number(prompt("Try again"))
+}
 switch (chooseNumber) {
-    case 1:
+    case 1: 
         alert("Black to square 1");
         break;
     case 2:
-        alert("Goodu 2-shoes");
+        alert("Goody 2-shoes");
         break;
     case 3: 
     case 6:
@@ -28,6 +29,6 @@ switch (chooseNumber) {
         break;
     case 10:
         alert("Cheaper by the dozen");
-    default:
-        prompt("Try again");
+
 }
+
