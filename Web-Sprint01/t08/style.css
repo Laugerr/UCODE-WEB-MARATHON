@@ -1,0 +1,23 @@
+.circle {
+    margin-top: 150px;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    background-color: green;
+    animation-duration: 5s;
+    animation-name: marquee;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.circle:hover {
+    transition: all ease 2s;
+    background-color: red;
+}
+
+@keyframes marquee {
+    from {
+        margin-right: calc(100% - 260px);
+        margin-left: calc(100% - 260px);
+    }
+}

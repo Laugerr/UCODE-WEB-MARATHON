@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <meta name="description" content="t07. GAMESHOP">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="search-nav">
+    <nav>
+        <h1><a href="index.html">TechShop&#9732;</a></h1>
+        <div class="search">
+            <div class="search-block">
+                <input type="search" placeholder="Enter search phrase" class="search">
+                <button type="submit" class="fn">Find</button>
+            </div>
+        </div>
+
+        <span class="phone" href="#">+24725458440</span>
+    </nav>
+</div>
+
+<ul class="catalog-path">
+    <li><a href="index.html">Home</a></li>
+    <li>Products</li>
+</ul>
+
+<section class="products">
+    <div class="section-model">
+        <h2>Products</h2>
+    </div>
+
+    <div class="radio-filters">
+        <div class="form_radio_button">
+            <input id="smartphone" type="radio" name="type" value="type-smartphone" />
+            <label for="smartphone">Electronic</label>
+        </div>
+
+        <div class="form_radio_button">
+            <input id="notebook" type="radio" name="type" value="type-notebook" />
+            <label for="notebook">Robotic</label>
+        </div>
+
+    </div>
+    <div class="catalog-grid">
+        <div class="filters-menu">
+            <div class="checkboxes">
+                <p><b>Electronis</b></p>
+                <p>
+                    <input type="checkbox" name="color" value="graphite" />Canon<br>
+                    <input type="checkbox" name="color" value="pacific-blue" />Piestra<br>
+                    <input type="checkbox" name="color" value="silver" />Lma7al<br>                    
+                </p>
+            </div>
+            <div class="prices">
+                <p><b>Price</b></p>
+                <div class="price">
+                    <input id="price-range" type="range" value="2500" min="0" max="5000" />
+                    <p id="price-count">
+                    <h5>10 000 ₴</h5>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="products-center">
+            <a href="card.html">
+                <article>
+                    <div class="img-container">
+                        <div class="slider-container">
+                            <img src="assets/images/pic1.jpg" alt="product"/>
+                        </div>
+                        <button class="buy-button" data-id="1">
+                            Buy
+                        </button>
+                    </div>
+                    <h2>Canon EOS 2000D BK 18-55mm IS II IS + EF 75-300mm f / 4-5.6 III USM Kit (2728C021AA) Official warranty!
+                    </h2>
+                    <h3>17 999 ₴</h3>
+                </article>
+            </a>
+            <a>
+                <article>
+                    <div class="img-container">
+                        <div class="slider-container">
+                            <img src="assets/images/pic2.jpg" alt="product"/>
+                        </div>
+                        <button class="not-evailable-button" data-id="1">
+                            Not in stock
+                        </button>
+                    </div>
+                    <h2>Hohem iSteady X Black (6971071550203) + backpack for free!</h2>
+                    <h3>1 399 ₴</h3>
+                </article>
+            </a>
+            <a>
+                <article>
+                    <div class="img-container">
+                        <div class="slider-container">
+                            <img src="assets/images/pic3.jpg" alt="product"/>
+                        </div>
+                        <button class="not-evailable-button" data-id="1">
+                            Not in stock
+                        </button>
+                    </div>
+                    <h2>Xiaomi Mi Smart Band 4 NFC Black</h2>
+                    <h3>699 ₴</h3>
+                </article>
+            </a>
+            <a>
+                <article>
+                    <div class="img-container">
+                        <div class="slider-container">
+                            <img src="assets/images/pic4.jpg" alt="product"/>
+                        </div>
+                        <button class="not-evailable-button" data-id="1">
+                            Not in stock
+                        </button>
+                    </div>
+                    <h2>Headphones QCY T5 TWS Bluetooth Black (6957141405505)</h2>
+                    <h3>449 ₴</h3>
+                </article>
+            </a>
+        </div>
+</section>
+
+</body>
+
+
+</html>

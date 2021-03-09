@@ -1,0 +1,118 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(100, 1fr);
+    border: 3px solid black;
+    border-radius: 20px;
+    position: absolute;
+    padding: 15px;
+}
+
+body {
+    margin: 15px;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 639px) {
+    .grid {
+        grid-template-columns: repeat(24, 1fr);
+    }
+    .picture1 {
+        grid-column: 1 / span 16;
+    }
+    .picture2 {
+        grid-column: 1 / span 19;
+    }
+    .picture3 {
+        grid-column: 1 / span 16;
+    }
+    .picture4 {
+        grid-column: 1 / 15;
+        grid-row: 4;
+    }
+    .picture5 {
+        grid-column: 1 / 13;
+        grid-row: 5;
+    }
+    .picture6 {
+        grid-column: 13 / 25;
+        grid-row: 4 / 6;
+    }
+    .picture7 {
+        grid-column: span 13;
+    }
+    .picture8 {
+        grid-column: span 8;
+    }
+    .picture9 {
+        grid-column: span 15;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .picture1 {
+        grid-column: span 68;
+    }
+    .picture2 {
+        grid-column: span 83;
+    }
+    .picture3 {
+        grid-column: span 63;
+    }
+    .picture4 {
+        grid-column: span 52;
+    }
+    .picture5 {
+        grid-column: span 43;
+    }
+    .picture6 {
+        grid-column: span 35;
+    }
+    .picture7 {
+        grid-column: span 48;
+    }
+    .picture8 {
+        grid-column: span 22;
+    }
+    .picture9 {
+        grid-column: span 55;
+    }
+}
+
+@media only screen and (min-width: 1367px) {
+    .picture1 {
+        grid-column: 1 / 50;
+    }
+    .picture2 {
+        grid-column: 50 / 101;
+    }
+    .picture3 {
+        grid-column: 1 / 39;
+    }
+    .picture4 {
+        grid-column: 39 / 69;
+    }
+    .picture5 {
+        grid-column: 69 / 101;
+    }
+    .picture6 {
+        grid-column: 1 / 23;
+    }
+    .picture7 {
+        grid-column: 23 / 53;
+    }
+    .picture8 {
+        grid-column: 58 / 71;
+    }
+    .picture9 {
+        grid-column: 71 / 101;
+    }
+}
