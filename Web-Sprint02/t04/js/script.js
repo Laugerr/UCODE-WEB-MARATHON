@@ -24,7 +24,7 @@ function checkDivision(beginRange = 1, endRange = 100){
         }if(status === ""){
             status = "-";
         }
-        console.log(String(i + " " + status));
+        console.log(i + " " + status);
     }
 }
 
@@ -32,13 +32,13 @@ beginRange = prompt("Enter The begining Range: ");
 endRange = prompt("Enter The endind Range: ");
 if (beginRange === "" || endRange === ""){
     if(beginRange === "" && endRange !== ""){
-        checkDivision(1, endRange);
+        checkDivision(1, +endRange);
     }if(beginRange !== "" && endRange === ""){
-        checkDivision(beginRange, 100);
+        checkDivision(+beginRange, 100);
     }
     if(beginRange === "" && endRange === ""){
         checkDivision();
     }
 }else if(beginRange !== "" && endRange !== ""){
-    checkDivision(beginRange, endRange);
+    checkDivision(+beginRange, +endRange);
 }
