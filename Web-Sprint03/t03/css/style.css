@@ -1,0 +1,47 @@
+body {
+    background: black;
+    color: green;
+}
+#sec-img, #sec-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+img {
+    width: 500px;
+    height: 300px;
+    border-radius: 62px;
+}
+
+.blocks, .controlB{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+.blocks{
+    padding-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, black 40%, white 90%);
+}
+
+span {
+    text-align: right;
+    color: rgb(168, 29, 11);
+    font-size: 20px;
+}
+
+.controlB button{
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid green;
+}
+
+button:hover{
+    box-shadow: 2px 4px 42px green;
+}
