@@ -1,0 +1,36 @@
+body main {
+    display: flex;
+    flex-direction: row;
+}
+
+table {
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+}
+
+thead {
+    background: red;
+}
+
+tbody {
+    background: rgba(128, 128, 128, 0.349);
+}
+
+td {
+    padding: 10px 30px;
+}
+
+#placeholder {
+    flex: auto;
+    visibility: hidden;
+}
+
+#notification {
+    padding: 10px;
+    border: 1px solid gray;
+    background: gray;
+    height: 20px;
+    border-radius: 50px;
+}
+
