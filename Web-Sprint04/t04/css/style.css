@@ -1,0 +1,58 @@
+body {
+    text-align: center;
+  }
+
+  img {
+    float:right;
+    width: 200px;
+    height: 300px;
+    margin-top: -70px;
+    padding: 15px;
+  }
+  .section {
+    display: flex;
+    background-color: rgba(153, 165, 170, 0.164);
+    opacity: 0.9;
+    width: 1300px;
+    height: 400px;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 5px 20px;
+  }
+  .part1 {
+    float:left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 250px;
+    border-right: 2px solid white;
+    padding: 10px;
+    cursor:pointer;
+  }
+  .part1 p {
+    top: 20px;
+    font-size: 20px;
+    
+  }
+  .part2 {
+    text-align: left;
+    padding: 5px;
+    font-size: 18px;
+    
+  }
+  .actors {
+    display: flex;
+    justify-content: left;
+    position: relative;
+    left: -10px;
+  }
+  .actor {
+    color: white;
+    text-align: center;
+    background-color: rgba(72, 123, 189, 0.692);
+    border-radius: 10px;
+    padding: 19px;
+    margin: 5px;
+  }
+ 

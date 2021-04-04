@@ -1,0 +1,51 @@
+.stone {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    transform: rotate(45deg);
+    background-color: yellow;
+    border: 3px dashed black;
+}
+.stone.green {
+    top: 90px;
+    left:20px;
+    background-color: green;
+}
+.stone.yellow {
+    top: 10px;
+    left:40px;
+    background-color: yellow;
+    border: none;
+}
+.stone.red {
+    top:150px;
+    left:100px;
+    background-color: red;
+}
+.stone.blue {
+    top:60px;
+    left:100px;
+    background-color: blue;
+}
+.stone.pink {
+    top:110px;
+    left:170px;
+    background-color: pink;
+}
+.stone.purple {
+    top:200px;
+    left:30px;
+    background-color: purple;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+      -webkit-overflow-scrolling: touch; 
+      -moz-overflow-scrolling: touch;
+      -ms-overflow-scrolling: touch; 
+      -webkit-user-select: none; 
+      -moz-user-select: none; 
+      -ms-user-select: none; 
+      user-select: none; 
+    }
+  }

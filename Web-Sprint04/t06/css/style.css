@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+img {
+    margin: 25px;
+}
+.par {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 100%;
+}
+p {
+    position: absolute;
+    font-size: 1em;
+    background-color: red;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 6px;
+    top: 0;
+    right: 0;
+    width: 200px;
+    text-align: center;
+}
+p.done {
+    background-color: lightgreen;
+}

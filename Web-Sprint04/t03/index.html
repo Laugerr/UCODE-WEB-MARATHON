@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Slideshow</title>
+</head>
+<body>
+    <div class="slidecontainer">
+
+        <div class="slides fade">
+          <img src="assets/images/dubai1.jpeg" style="width:100%">
+        </div>
+      
+        <div class="slides fade">
+          <img src="assets/images/dubai2.jpeg" style="width:100%">
+        </div>
+      
+        <div class="slides fade">
+          <img src="assets/images/dubai3.png" style="width:100%">
+        </div>
+
+        <div class="slides fade">
+            <img src="assets/images/dubai4.jpeg" style="width:100%">
+        </div>
+      
+        <a class="left" onclick="nextSlide(-1)"><span>&#10094;</span></a>
+        <a class="right" onclick="nextSlide(1)"><span>&#10095;</span></a>
+      </div>
+</body>
+</html>
