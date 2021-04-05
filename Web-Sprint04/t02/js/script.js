@@ -1,53 +1,127 @@
-let tHeadString = ["Name", "Strength", "Age"];
-var tNameString = ["Black Panther", "Captain America", "Captain Marvel", "Hulk", "Iron Man", "Thanos", "Thor", " Yon-Rogg"];
-let tStrengthString = [66, 79, 97, 80, 88, 78, 99, 95, 73];
-let ageString = [53, 137, 26, 49, 48, 16, 1000, 1000, 52];
-
-let data = [ tNameString,tStrengthString, ageString];
 
 
-function tableCreate() {
-    var body = document.getElementsByTagName('body')[0];
-    var tbl = document.createElement('table');
+  // let tableElement = [
+  //   {r11: "Black Pantera", r12: 66, r13: 53},
+  //   {r11: "Captain America", r12: 79, r13: 137},
+  //   {r11: "Captain Marvel", r12: 97, r13: 26},
+  //   {r11: "Hulk", r12: 5, r13: 49},
+  //   {r11: "Iron Man", r12: 88, r13: 48},
+  //   {r11: "Spider-Man", r12: 78, r13: 16},
+  //   {r11: "Thanos", r12: 99, r13: 1000},
+  //   {r11: "Thor", r12: 95, r13: 1000},
+  //   {r11: "Yon-Rogg", r12: 73, r13: 52}
+  // ];
+  
+  // let headerElement = ['Name', 'Strength', 'Age'];
+  
+  // let table = document.createElement('TABLE');
+  // table.classList.add('table');
+  // document.body.append(table);
+  
+  // let thead = document.createElement('THEAD');
+  // thead.classList.add('tHead');
+  // table.append(thead);
+  
+  // let tablebody = document.createElement('TBODY');
+  // tablebody.classList.add('tBody');
+  // table.append(tablebody);
+  
+  // let tr = document.createElement('TR');
+  // thead.append(tr);
 
-    // ------------------------ Table Header-------------------------
-    var thead = document.createElement('thead');
-    var tr = document.createElement('tr');
-    
+  // let th = document.createElement('TH');
+  // th.classList.add('data-type');
+  
 
-    for(var i = 0; i < tHeadString.length; i++){
-        var td = document.createElement('td');
-        td.appendChild(document.createTextNode(tHeadString[i]));
-        td.className = tHeadString[i];
-        td.onclick = function (){
-          tableSort(tHeadString[i]);
-        };
-        tr.appendChild(td);
-    }
-    thead.appendChild(tr);
-    // ------------------------ Table Body-------------------------
-    var tbdy = document.createElement('tbody');
-    for (var i = 0; i < tNameString.length; i++) {
-      var tr = document.createElement('tr');
-      for (var j = 0; j < tHeadString.length; j++) {
-        var td = document.createElement('td');
-        td.appendChild(document.createTextNode(data[j][i]))
-        tr.appendChild(td);
-        
+  // for (let c = 0; c < headerElement.length; c++) {
+  //   let th = document.createElement('TH');
+  //   th.classList.add('data-type');
+  //   th.insertAdjacentHTML("beforeend", headerElement[c]);
+  //   th.setAttribute("id",`header${c}`);
+  //   tr.append(th);
+  // }
+  // let renderCell = () => {
+  //   tablebody.innerHTML = '';
+  //   for (let i = 0; i < tableElement.length; i++) {
+  //     let tr = document.createElement('tr');
+  //     tablebody.append(tr);
+  //     for (let j = 0; j < Object.keys(tableElement[0]).length; j++) {
+  //       let td = document.createElement('td');
+  //       td.insertAdjacentHTML(`beforeend`, Object.values(tableElement[i])[j]);
+  //       tr.append(td);
+  //     }
+  //   }
+  // }
+
+  // renderCell();
+  
+
+
+// --------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+  const table = document.getElementById('sortMe');
+  const headers = table.querySelectorAll('th');
+  const tableBody = table.querySelector('tbody');
+  const rows = tableBody.querySelectorAll('tr');
+
+  // Track sort directions
+  const directions = Array.from(headers).map(function(header) {
+      return '';
+  });
+
+  // Transform the content of given cell in given column
+  const transform = function(index, content) {
+      // Get the data type of column
+      const type = headers[index].getAttribute('data-type');
+      switch (type) {
+          case 'number':
+              return parseFloat(content);
+          case 'string':
+          default:
+              return content;
       }
-      tbdy.appendChild(tr);
-    }
-    tbl.appendChild(thead);
-    tbl.appendChild(tbdy);
-    body.appendChild(tbl)
-  }
-  tableCreate();
+  };
 
+  const sortColumn = function(index) {
+      // Get the current direction
+      const direction = directions[index] || 'asc';
 
+      // A factor based on the direction
+      const multiplier = (direction === 'asc') ? 1 : -1;
 
-function tableSort(SortT){
-  if(SortT === "Name"){
-    tNameString.sort();
-    document.querySelector('#notification').innerHTML= "Sorting by Name, order: ASC"
-  }
-}
+      const newRows = Array.from(rows);
+
+      newRows.sort(function(rowA, rowB) {
+          const cellA = rowA.querySelectorAll('td')[index].innerHTML;
+          const cellB = rowB.querySelectorAll('td')[index].innerHTML;
+
+          const a = transform(index, cellA);
+          const b = transform(index, cellB);    
+
+          switch (true) {
+              case a > b: return 1 * multiplier;
+              case a < b: return -1 * multiplier;
+              case a === b: return 0;
+          }
+      });
+
+      // Remove old rows
+      [].forEach.call(rows, function(row) {
+          tableBody.removeChild(row);
+      });
+
+      // Reverse the direction
+      directions[index] = direction === 'asc' ? 'desc' : 'asc';
+
+      // Append new row
+      newRows.forEach(function(newRow) {
+          tableBody.appendChild(newRow);
+      });
+  };
+
+  [].forEach.call(headers, function(header, index) {
+      header.addEventListener('click', function() {
+          sortColumn(index);
+      });
+  });
+});

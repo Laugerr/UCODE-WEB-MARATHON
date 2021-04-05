@@ -9,11 +9,11 @@ table {
     text-align: center;
 }
 
-thead {
+tHead {
     background: red;
 }
 
-tbody {
+tBody {
     background: rgba(128, 128, 128, 0.349);
 }
 

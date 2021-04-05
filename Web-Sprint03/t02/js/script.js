@@ -1,21 +1,28 @@
 class Timer {
-    constructor(){
+    constructor(title, delay, stopCount){
          this.title = title;
          this.delay = delay;
-         this.stopCount = this.stopCount;
+         this.stopCount = stopCount;
     }
     start(){
         console.log("Timer " + this.title + " started " + "(delay=" + this.delay + ", stopCount=" + this.stopCount + ")")
+        this.timer = setInterval(() => this.tick(), this.delay)
+
     }
     tick(){
-        console.log("Timer "+ this.title +" Tick! | cycles left " + Number(this.delay))
+        this.stopCount--;
+        console.log("Timer "+ this.title +" Tick! | cycles left " + this.stopCount);
+        if(this.stopCount === 0) {
+            this.stop();
+        }
     }
     stop(){
-        console.log("Timer " + this.title + "stopped")
+        clearInterval(this.timer);
+        console.log("Timer " + this.title + " stopped")
     }
 }
 
 function runTimer(id, delay, counter){
-    
+    new Timer(id, delay, counter).start();
 }
 
